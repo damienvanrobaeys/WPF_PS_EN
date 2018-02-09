@@ -1,0 +1,240 @@
+<Controls:MetroWindow 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"                     
+    Height="400" 
+	Width="1000" 
+	Background="#191970"
+	WindowState="Maximized"
+	WindowStyle="None" 
+	UseNoneWindowStyle="True"
+	>
+
+
+   <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source=".\resources\Icons.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cyan.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl>
+            <Controls:Flyout x:Name="FlyOutContent" Header="Settings" Position="Right" Width="200"  Theme="Accent" Grid.RowSpan="4" IsPinned="False" Opacity="0.93" >
+               <Grid>
+                    <StackPanel Orientation="Vertical">	
+						<StackPanel VerticalAlignment="top">
+							<StackPanel Orientation="Horizontal">
+								<ComboBox x:Name="Choose_parameter" SelectedIndex="0" Text="Choose" Width="100" Margin="15,0,0,0">
+									<ComboBoxItem Content="Parameter"></ComboBoxItem>
+									<ComboBoxItem  x:Name="Services" Content="Services"></ComboBoxItem>
+									<ComboBoxItem  x:Name="Hotfix" Content="Hotfix"></ComboBoxItem>
+									<ComboBoxItem  x:Name="Process" Content="Process"></ComboBoxItem>
+								</ComboBox>
+								<Button x:Name="Run" Content="Run" Margin="10,0,0,0" Width="50"/>
+							</StackPanel>
+						</StackPanel>
+                    </StackPanel>
+						
+					<StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
+						<GridSplitter HorizontalAlignment="Stretch" Foreground="LightSkyBlue" Height="1" Margin="0,0,0,0" />
+						<StackPanel Orientation="Horizontal"  FlowDirection="LeftToRight" Width="200" HorizontalAlignment="Left" Margin="15,20,0,0">
+							<Button x:Name="Open_Installed_Soft" Width="50" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Background="Transparent" Height="50" Margin="0,0,0,0" Style="{DynamicResource MetroCircleButtonStyle}" >
+								<Rectangle Width="25" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="White">
+									<Rectangle.OpacityMask>
+										<VisualBrush Stretch="Fill" Visual="{StaticResource appbar_cog}"/>
+									</Rectangle.OpacityMask>
+								</Rectangle>
+							</Button>
+							
+
+
+							<Button x:Name="IE_Site" Width="50" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Background="Transparent" Height="50" Margin="0,0,0,0" Style="{DynamicResource MetroCircleButtonStyle}" >
+								<Rectangle Width="25" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="White">
+									<Rectangle.OpacityMask>
+										<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_ie}"/>
+									</Rectangle.OpacityMask>
+								</Rectangle>
+							</Button>
+
+							<Button x:Name="Close"  Width="50" HorizontalAlignment="Right" Background="Transparent" Height="50" Style="{DynamicResource MetroCircleButtonStyle}" >
+								<Rectangle Width="25" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="White">
+									<Rectangle.OpacityMask>
+										<VisualBrush Stretch="Fill" Visual="{StaticResource appbar_power}"/>
+									</Rectangle.OpacityMask>
+								</Rectangle>
+							</Button>
+						</StackPanel>					
+					</StackPanel>
+                </Grid>
+            </Controls:Flyout>
+        </Controls:FlyoutsControl>
+    </Controls:MetroWindow.Flyouts>
+
+	<Grid>
+	
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="600*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="220*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="Our first Tiles GUI" Foreground="White" FontSize="35"/>		
+
+        <WrapPanel Grid.Row="1" Grid.Column="1" Width="1500" Height="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+		
+            <Controls:Tile Title="Desktop" x:Name="Open_Desktop" TitleFontSize="10" Margin="3" Height="125" Width="147">
+                <Controls:Tile.Background>
+				     <ImageBrush ImageSource="Images/desktop.jpg" />
+                </Controls:Tile.Background>
+            </Controls:Tile>
+			
+            <Controls:Tile Title="Powershell" x:Name="Open_Powershell" TitleFontSize="10" Margin="3" Height="125" Width="300" >
+                <Controls:Tile.Background>
+				     <ImageBrush ImageSource="Images/powershell.jpg" />
+                </Controls:Tile.Background>
+            </Controls:Tile>
+			
+            <Controls:Tile Title="" x:Name="Open_Youtube" TitleFontSize="10" Margin="3" Background="red" Height="125" Width="147">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_youtube}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+
+            <Controls:Tile Title="Task Manager" x:Name="Open_TaskManager" TitleFontSize="10" Margin="3" Background="#A200FF" Height="125" Width="147">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_clean}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+
+            <Controls:Tile Title="Linkedin" x:Name="Open_Linkedin" TitleFontSize="10" Margin="3" Background="#2E8DEF" Height="125" Width="300">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_social_linkedin}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+
+            <Controls:Tile Title="Google Plus" x:Name="Open_GooglePlus" TitleFontSize="10" Margin="3" Background="red" Height="125" Width="147">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_googleplus}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+			
+            <Controls:Tile Title="Outlook" x:Name="Open_Mail" TitleFontSize="10" Margin="3" Background="orange" Height="125" Width="300">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_email_minimal}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+<!--
+            <Controls:Tile  x:Name="ffffff" TitleFontSize="10" Margin="3" Height="125" Width="147" >
+                <Controls:Tile.Background>
+				     <ImageBrush ImageSource="Images/logo.png" />
+                </Controls:Tile.Background>
+            </Controls:Tile>			
+
+            <Controls:Tile Title="Control panel" x:Name="Open_Controlpanel" TitleFontSize="10" Margin="3" Background="teal" Height="125" Width="300">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_settings}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>-->
+
+            <Controls:Tile Title="Internet Explorer" x:Name="Open_IE" TitleFontSize="10" Margin="3" Background="#1BA1E2" Height="125" Width="147">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_ie}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+			
+			
+			
+<Controls:Tile x:Name="MyTile1" Background="Red" Width="125" Height="125"/>					
+<Controls:Tile x:Name="MyTile2" Background="#A200FF" Width="125" Height="125"/>		
+			
+			
+			
+			
+			
+			
+
+            <Controls:Tile Title="Store" x:Name="Open_Store" TitleFontSize="10" Margin="3" Background="green" Height="125" Width="300">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_marketplace}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+
+            <Controls:Tile Title="Weather" x:Name="Open_Meteo" TitleFontSize="10" Margin="3" Background="#2672EC" Height="125" Width="300">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_weather_sun}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+
+            <Controls:Tile Title="Blogger" x:Name="Open_Blogger" TitleFontSize="10" Margin="3" Background="orange" Height="125" Width="147">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_social_blogger}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+			
+            <Controls:Tile Title="Device manager" x:Name="Open_Device" TitleFontSize="10" Margin="3" Background="#FF0097" Height="125" Width="147">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_tools}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+
+            <Controls:Tile Title="Skydrive" x:Name="Open_Skydrive" TitleFontSize="10" Margin="3" Background="#094AB2" Height="125" Width="300">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_skydrive}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+
+            <Controls:Tile Title="Services list" x:Name="Open_Services" TitleFontSize="10" Margin="3" Background="#BF1E4B" Height="125" Width="147">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_monitor}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+
+            <Controls:Tile x:Name="ChangeSettings" Title="Open flyout" TitleFontSize="10" Margin="3" Background="#77B900" Height="125" Width="147">
+				<Rectangle Fill="White"  Height="60" Width="60">
+					<Rectangle.OpacityMask>
+						<VisualBrush  Stretch="Fill" Visual="{StaticResource appbar_monitor_to}" />
+					</Rectangle.OpacityMask>
+				</Rectangle>			
+            </Controls:Tile>
+			
+        </WrapPanel>
+		
+	</Grid>
+
+</Controls:MetroWindow>        

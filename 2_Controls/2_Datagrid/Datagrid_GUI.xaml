@@ -1,0 +1,83 @@
+<Controls:MetroWindow 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="DeploymentShare Selection" 
+        Width="600" 
+        Height="250"  
+		ResizeMode="NoResize"	
+		>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Create Metro Style  -->
+                <ResourceDictionary Source=".\resources\Icons.xaml" />
+                <ResourceDictionary Source=".\resources\custom.xaml" /> 
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+	
+	
+    <Controls:MetroWindow.LeftWindowCommands>
+        <Controls:WindowCommands>	
+            <Button>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="15" Height="15" Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_os_windows_8}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                </StackPanel>
+            </Button>		
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.LeftWindowCommands>			
+
+
+    <Grid>	
+		<StackPanel>	
+
+			<StackPanel HorizontalAlignment="Left"  Margin="5,10,0,0" Orientation="Horizontal" >							
+				<Label Content="MDT DeploymentShare Selection" FontSize="20" />	
+				<Rectangle x:Name="USB_Image" Margin="20,0,0,0" Width="40" Height="40"  Fill="CornflowerBlue">
+					<Rectangle.OpacityMask>
+						<VisualBrush Stretch="Fill" Visual="{StaticResource appbar_os_windows_8}"/>
+					</Rectangle.OpacityMask>
+				</Rectangle>				
+			</StackPanel>
+		
+
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="5,-30,10,10">
+				<StackPanel Margin="0,0,0,0">					
+					<TabControl x:Name="Tab_Control" Margin="0,0,0,0" Width="500" Height="170">
+						<TabItem x:Name="appimage" Header="" Margin="0,0,0,0">											
+							<Grid Background="CornFlowerBlue">
+								<DataGrid SelectionMode="Single"  Name="DataGrid_XML"  ItemsSource="{Binding}"  Margin="2,2,2,2" >
+									<DataGrid.Columns>				
+										<DataGridTextColumn Header="Label" Binding="{Binding Label}"/>																			
+										<DataGridTextColumn Header="Path" Binding="{Binding Path}"/>	
+										<DataGridTextColumn Header="Version" Binding="{Binding Version}"/>
+									</DataGrid.Columns>
+								</DataGrid>
+							</Grid>
+						</TabItem>
+					</TabControl>					
+				</StackPanel>
+			</StackPanel>					
+	
+
+		</StackPanel>		
+    </Grid>
+</Controls:MetroWindow>        
+   
+    
+    
+    
