@@ -1,0 +1,75 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Basic version" 
+		Height="550" Width="340" 
+		ResizeMode="NoResize">
+		
+    <Grid Background="white">       
+        <StackPanel Orientation="Vertical" Margin="10,10,10,0">
+		
+			<StackPanel Orientation="Horizontal"  FlowDirection="LeftToRight" Margin="0,5,0,0" HorizontalAlignment="Center">
+				<Label Content="MY GUI to Update" Margin="0,0,0,0" FontSize="20"/>										
+			</StackPanel>		
+		
+            <GroupBox Header="Deployment share selection" FlowDirection="RightToLeft" Height="60" Margin="0,10,0,0" Width="300" HorizontalAlignment="left">	
+				<StackPanel Orientation="Horizontal"  FlowDirection="LeftToRight" Margin="0,5,0,0" HorizontalAlignment="Center">
+					<ComboBox x:Name="Choose_DS" SelectedIndex="0" Text="Choose" Height="25" Width="235" Margin="0,0,0,0">										
+					</ComboBox>
+				</StackPanel>
+			</GroupBox>
+		
+            <GroupBox Header="Folder sources" FlowDirection="RightToLeft" Height="60" Margin="0,5,0,0" Width="300" HorizontalAlignment="left">
+                <StackPanel>															
+                    <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+                        <Button x:Name="Browse" Content="Browse" Margin="4,0,0,0" Width="80"></Button>
+                        <TextBox x:Name="TextBox_Browse" Margin="5,0,0,0" Width="120" Height="25"></TextBox>
+                    </StackPanel>							
+                </StackPanel>             
+            </GroupBox>
+
+            <GroupBox Header="CheckBox options" HorizontalAlignment="Left" Margin="0,5,0,0" Height="45" FlowDirection="RightToLeft"  Width="300">
+				<StackPanel Orientation="Horizontal"  FlowDirection="LeftToRight" Margin="0,5,0,0" HorizontalAlignment="Center">
+					<CheckBox x:Name="Appli_Reboot" Content="Reboot" Margin="4,0,0,0" Width="70" Height="19"></CheckBox>										
+					<CheckBox x:Name="Appli_Hide" Content="Hide" Margin="4,0,0,0" Width="70" Height="19"></CheckBox>
+					<CheckBox x:Name="Appli_Enable" Content="Enable" Margin="4,0,0,0" Width="70" Height="19"></CheckBox>
+				</StackPanel>
+            </GroupBox>	
+			
+            <GroupBox Header="RadioButton options" HorizontalAlignment="Left" Margin="0,5,0,0" Height="45" FlowDirection="RightToLeft"  Width="300">
+				<StackPanel Orientation="Horizontal"  FlowDirection="LeftToRight" Margin="0,5,0,0" HorizontalAlignment="Center">
+					<RadioButton x:Name="Reboot_Radio" Content="Reboot" Margin="4,0,0,0" Width="70" Height="19"></RadioButton>										
+					<RadioButton x:Name="Hide_radio" Content="Hide" Margin="4,0,0,0" Width="70" Height="19"></RadioButton>
+				</StackPanel>
+            </GroupBox>				
+			
+			<TabControl x:Name="Tab_Control" HorizontalAlignment="Left" Height="170"  VerticalAlignment="Top" Width="300" Margin="0,10,0,0">		
+				<TabItem Header="Infos" Margin="0,0,0,0">
+					<Grid>
+						<DataGrid SelectionMode="Single"  Name="DataGrid_XML"  ItemsSource="{Binding}"  Margin="2,2,2,2" >
+							<DataGrid.Columns>				
+								<DataGridTextColumn Header="Label" Binding="{Binding Label}"/>																			
+								<DataGridTextColumn Header="Path" Binding="{Binding Path}"/>	
+								<DataGridTextColumn Header="Version" Binding="{Binding Version}"/>
+							</DataGrid.Columns>
+						</DataGrid>
+					</Grid>
+				</TabItem>			
+						
+				<TabItem Header="Details" Margin="0,0,0,0">
+						<Grid>
+                                   
+						</Grid>
+				</TabItem>
+				
+				<TabItem Header="Other" Margin="0,0,0,0">
+						<Grid>
+                                   
+						</Grid>
+				</TabItem>				
+				
+				
+			</TabControl>
+        </StackPanel>        
+    </Grid>
+</Window>

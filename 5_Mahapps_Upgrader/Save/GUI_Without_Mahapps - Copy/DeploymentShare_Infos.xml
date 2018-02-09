@@ -1,0 +1,20 @@
+<DeploymentShares>
+	<DeploymentShare>
+		<Label>DeploymentShare PARIS</Label>
+		<Path>\\Path_to_DeploymentShare_PARIS</Path>	
+		<Version>MDT 2013 Update 1</Version>			
+	</DeploymentShare>
+
+	<DeploymentShare>
+		<Label>DeploymentShare RENNES</Label>
+		<Path>\\Path_to_DeploymentShare_RENNES</Path>	
+		<Version>MDT 2013 Update 2</Version>			
+	</DeploymentShare>	
+
+	<DeploymentShare>
+		<Label>DeploymentShare LONDON</Label>
+		<Path>\\Path_to_DeploymentShare_LONDON</Path>	
+		<Version>MDT 8443</Version>			
+	</DeploymentShare>		
+	
+</DeploymentShares>

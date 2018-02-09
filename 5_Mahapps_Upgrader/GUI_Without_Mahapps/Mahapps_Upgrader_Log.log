@@ -1,0 +1,27 @@
+09/02/2018 15:12:28 - # POWERSHELL TO MAHAPPS UPGRADER
+------------------------------------------------------------------------------------------------------------------------------
+09/02/2018 15:12:28 - An existing backup folder has been deleted
+09/02/2018 15:12:28 - Your folder content E:\Prez\Mahapps_FRPSUG_EN\GUI\5_Mahapps_Upgrader\GUI_Without_Mahapps has been copied in C:\Users\ADMINI~1\AppData\Local\Temp\Backup_GUI_Without_Mahapps
+------------------------------------------------------------------------------------------------------------------------------
+09/02/2018 15:12:28 - Your project folder is E:\Prez\Mahapps_FRPSUG_EN\GUI\5_Mahapps_Upgrader\GUI_Without_Mahapps
+09/02/2018 15:12:28 - The PS1 file to update is Testing_GUI.ps1
+09/02/2018 15:12:28 - The XAML file to update is Testing_GUI.xaml
+09/02/2018 15:12:28 - Mahapps folder resources and assembly have been copied
+------------------------------------------------------------------------------------------------------------------------------
+09/02/2018 15:12:28 - # UPDATE MY XAML PART
+------------------------------------------------------------------------------------------------------------------------------
+09/02/2018 15:12:28 - Your theme is: BaseLight
+09/02/2018 15:12:28 - Your accent is: Pink
+09/02/2018 15:12:28 - The XAML temp file has been copied: Temp_Testing_GUI.xaml
+09/02/2018 15:12:28 - The controls:¨MetroWindow part has been added
+09/02/2018 15:12:28 - The resources Mahapps part has been added
+09/02/2018 15:12:28 - The Testing_GUI.xaml file has been deleted
+09/02/2018 15:12:28 - The E:\Prez\Mahapps_FRPSUG_EN\GUI\5_Mahapps_Upgrader\GUI_Without_Mahapps\Temp_Testing_GUI.xaml file has been renamed as Testing_GUI.xaml
+------------------------------------------------------------------------------------------------------------------------------
+09/02/2018 15:12:28 - # UPDATE MY PS1 PART
+------------------------------------------------------------------------------------------------------------------------------
+09/02/2018 15:12:28 - The PS1 temp file has been copied: Temp_Testing_GUI.ps1
+09/02/2018 15:12:28 - The presentationframework assembly is already integrated in your PS1 file
+09/02/2018 15:12:28 - Mahapps has been integrated in your PS1 file
+09/02/2018 15:12:28 - The Testing_GUI.ps1 file has been deleted
+09/02/2018 15:12:28 - The E:\Prez\Mahapps_FRPSUG_EN\GUI\5_Mahapps_Upgrader\GUI_Without_Mahapps\Temp_Testing_GUI.ps1 file has been renamed as Testing_GUI.ps1
